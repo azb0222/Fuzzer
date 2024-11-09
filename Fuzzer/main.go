@@ -10,6 +10,18 @@ const (
 	filePath = "/home/asritha/HackUmass/TestInput/testInput"
 )
 
+type Fuzzer interface {
+	fuzz()
+}
+
+type BitFlipFuzzer struct {
+	filePath string
+}
+
+type RandomFileInputFuzzer struct {
+	generateRandomInput func() string
+}
+
 func main() {
 	data, err := os.ReadFile("testInput")
 
