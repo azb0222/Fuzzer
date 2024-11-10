@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	file, err := os.ReadFile("./pdf-h/test02.pdf")
+	file, err := os.ReadFile("./test02.pdf")
 	if err != nil {
 		fmt.Printf("%v", err)
 	}
